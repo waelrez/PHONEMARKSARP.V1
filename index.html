@@ -16,18 +16,18 @@
 
     <section id="login" class="screen active">
       <h1>Discord Phone</h1>
-      <p>Connexion à votre téléphone RP</p>
+      <p>تسجيل الدخول للهاتف </p>
       <input id="username" placeholder="Username">
       <input id="password" type="password" placeholder="Password">
-      <button onclick="login()">Connexion</button>
+      <button onclick="login()">ربط</button>
       <p id="loginError" class="error"></p>
     </section>
 
     <section id="activation" class="screen">
       <h1>Bonjour 👋</h1>
-      <p>Bienvenue sur votre nouveau téléphone</p>
+      <p>مرحبا بكم في هاتفكم الجديد</p>
       <input id="phoneName" placeholder="Nom du téléphone">
-      <button onclick="activate()">Activer mon téléphone</button>
+      <button onclick="activate()">تشغيل الهاتف</button>
     </section>
 
     <section id="home" class="screen">
@@ -38,18 +38,18 @@
         <button onclick="openApp('store')">🛍️<small>App Store</small></button>
         <button onclick="openApp('settings')">⚙️<small>Settings</small></button>
       </div>
-      <button class="logout" onclick="logout()">Déconnexion</button>
+      <button class="logout" onclick="logout()">تسجيل الخروج</button>
     </section>
 
     <section id="phone" class="screen">
       <h2>📞 Téléphone</h2>
       <input id="dialNumber" placeholder="Numéro">
-      <button onclick="callNumber()">Appeler</button>
+      <button onclick="callNumber()">اتصل</button>
       <button class="emergency" onclick="openApp('police')">
         🚨 Police 911
       </button>
       <p id="callResult"></p>
-      <button onclick="openApp('home')">Retour</button>
+      <button onclick="openApp('home')">الرجوع</button>
     </section>
 
     <section id="police" class="screen">
@@ -81,10 +81,10 @@
     <section id="settings" class="screen">
       <h2>⚙️ Settings</h2>
       <p id="accountInfo"></p>
-      <label>Nom du téléphone</label>
+      <label>اسم الهاتف</label>
       <input id="settingsName">
-      <button onclick="saveSettings()">Enregistrer</button>
-      <button onclick="openApp('home')">Retour</button>
+      <button onclick="saveSettings()">تسجيل</button>
+      <button onclick="openApp('home')">الرجوع</button>
     </section>
     <div class="homebar" onclick="goHome()"></div>
   </main>
