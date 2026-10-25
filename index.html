@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord Phone RP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="phone">
+    <div class="island"></div>
+    <div class="status">
+      <span id="clock">9:41</span>
+      <span>●●● ▰</span>
+    </div>
+
+    <section id="login" class="screen active">
+      <h1>Discord Phone</h1>
+      <p>Connexion à votre téléphone RP</p>
+      <input id="username" placeholder="Username">
+      <input id="password" type="password" placeholder="Password">
+      <button onclick="login()">Connexion</button>
+      <p id="loginError" class="error"></p>
+    </section>
+
+    <section id="activation" class="screen">
+      <h1>Bonjour 👋</h1>
+      <p>Bienvenue sur votre nouveau téléphone</p>
+      <input id="phoneName" placeholder="Nom du téléphone">
+      <button onclick="activate()">Activer mon téléphone</button>
+    </section>
+
+    <section id="home" class="screen">
+      <h2 id="welcome">Mon iPhone</h2>
+      <div class="apps">
+        <button onclick="openApp('phone')">📞<small>Phone</small></button>
+        <button onclick="openApp('twitter')">𝕏<small>Twitter</small></button>
+        <button onclick="openApp('store')">🛍️<small>App Store</small></button>
+        <button onclick="openApp('settings')">⚙️<small>Settings</small></button>
+      </div>
+      <button class="logout" onclick="logout()">Déconnexion</button>
+    </section>
+
+    <section id="phone" class="screen">
+      <h2>📞 Téléphone</h2>
+      <input id="dialNumber" placeholder="Numéro">
+      <button onclick="callNumber()">Appeler</button>
+      <button class="emergency" onclick="openApp('police')">
+        🚨 Police 911
+      </button>
+      <p id="callResult"></p>
+      <button onclick="openApp('home')">Retour</button>
+    </section>
+
+    <section id="police" class="screen">
+      <h2>🚨 Police 911</h2>
+      <p>Service de signalement RP</p>
+      <textarea id="policeReport" placeholder="Décrivez votre signalement..."></textarea>
+      <button onclick="sendPoliceReport()">Envoyer le signalement</button>
+      <p id="reportStatus"></p>
+      <button onclick="openApp('phone')">Retour</button>
+    </section>
+
+    <section id="twitter" class="screen">
+      <h2>𝕏 Twitter RP</h2>
+      <textarea id="tweetText" placeholder="Quoi de neuf ?"></textarea>
+      <button onclick="publishTweet()">Publier</button>
+      <div id="tweets"></div>
+      <button onclick="openApp('home')">Retour</button>
+    </section>
+
+    <section id="store" class="screen">
+      <h2>🛍️ App Store</h2>
+      <p>Applications disponibles</p>
+      <button onclick="installApp('Notes')">📝 Installer Notes</button>
+      <button onclick="installApp('Calculator')">🧮 Installer Calculator</button>
+      <p id="storeStatus"></p>
+      <button onclick="openApp('home')">Retour</button>
+    </section>
+
+    <section id="settings" class="screen">
+      <h2>⚙️ Settings</h2>
+      <p id="accountInfo"></p>
+      <label>Nom du téléphone</label>
+      <input id="settingsName">
+      <button onclick="saveSettings()">Enregistrer</button>
+      <button onclick="openApp('home')">Retour</button>
+    </section>
+    <div class="homebar" onclick="goHome()"></div>
+  </main>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
